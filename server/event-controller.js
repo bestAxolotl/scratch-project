@@ -3,6 +3,8 @@ const db = require('./database');
 const eventController = {};
 
 
+
+
 //---------- Welcome / Search Page Routes -------
 
 //----Search activities controller: 

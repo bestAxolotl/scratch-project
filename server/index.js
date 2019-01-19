@@ -10,6 +10,7 @@ const db = require('./database');
 const eventController = require('./event-controller');
 
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
