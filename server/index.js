@@ -19,7 +19,7 @@ app.use(cors())
 //---------- Welcome / Search Page Routes -------
 
 //Search activities route
-app.get('/activities', eventController.activitySearch);
+app.post('/activities', eventController.activitySearch);
 
 //Activity detail display route, accessable once search is populated
 app.get('/activity/:id', eventController.activityDetailPageDisplay);
@@ -45,7 +45,8 @@ app.get('/profile/:id', eventController.viewProfile);
 //---------- Create Activity Page Route -----------------
 
 //Create activity button route
-app.post('/createactivity', eventController.createActivity);
+//Create activity + generate location
+app.post('/createactivity', eventController.createActivity, eventController.generateLatAndLong);
 
 
 
